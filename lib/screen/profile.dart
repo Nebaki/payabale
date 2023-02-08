@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-<<<<<<< HEAD
 import 'package:get/get.dart';
 import 'package:payabale/screen/privacyPolicy/privacyPolicy.dart';
 import 'package:payabale/screen/termsAndCondition/termsAndCondition.dart';
@@ -9,8 +8,6 @@ import 'package:payabale/utils/constants.dart';
 
 import 'fees/fees.dart';
 import 'help/help.dart';
-=======
->>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -22,7 +19,6 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -38,7 +34,7 @@ class _ProfileState extends State<Profile> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-                margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                margin: EdgeInsets.fromLTRB(20, 10, 10, 0),
                 child: Text('Setting', style: TextStyle(fontSize: 20))),
             Container(
                 margin: EdgeInsets.all(8),
@@ -118,8 +114,12 @@ class _ProfileState extends State<Profile> {
             Container(
                 margin: EdgeInsets.all(8),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('About us', style: TextStyle(fontSize: 20)),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, bottom: 10),
+                      child: Text('About us', style: TextStyle(fontSize: 20)),
+                    ),
                     Card(
                       child: Container(
                         margin: EdgeInsets.only(left: 15),
@@ -243,12 +243,3 @@ class _ProfileState extends State<Profile> {
     );
   }
 }
-=======
-    return  Scaffold(
-      body:Stack(
-        
-      )
-    );
-  }
-}
->>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea

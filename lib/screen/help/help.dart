@@ -63,7 +63,129 @@ class _HelpState extends State<Help> {
                   Icons.cloud_circle_outlined,
                   size: 30,
                   color: primaryColor,
-                ))
+                )),
+            Container(
+              margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+              child: Text(
+                'Hi ,how can we help you?',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35,
+                    color: primaryColor),
+              ),
+            ),
+            Container(
+                margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                child: TextField(
+                  decoration: InputDecoration(
+                      label: Text('Enter the search item here ...')),
+                )),
+            Container(
+              height: 300,
+              child: ListView(
+                scrollDirection: Axis.vertical,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.green,
+                    ),
+                    margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.rocket_launch,
+                          size: 50,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text('Getting Started',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                color: Colors.white))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color.fromARGB(255, 95, 24, 201),
+                    ),
+                    margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.change_circle,
+                          size: 50,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Text('Sending and receiving money',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30,
+                                  color: Colors.white)),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color.fromARGB(255, 179, 18, 190),
+                    ),
+                    margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.card_membership,
+                          size: 50,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text('PayAble card ',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                color: Colors.white))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.blue,
+                    ),
+                    margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.attach_money_rounded,
+                          size: 50,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text('Adding money',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                color: Colors.white))
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

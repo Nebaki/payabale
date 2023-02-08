@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 const primaryColor = Colors.green;
-<<<<<<< HEAD
 const backGroundColor = Color.fromARGB(255, 230, 241, 230);
-=======
->>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea
 
 final RegExp emailValidatorRegExp =
     RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
@@ -29,7 +26,7 @@ void showSnackBar(String text) {
   Get.rawSnackbar(
     messageText: Text(
       text,
-      style: TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.white),
     ),
     snackStyle: SnackStyle.FLOATING,
     backgroundColor: primaryColor,
@@ -43,7 +40,7 @@ const headingStyle = TextStyle(
 );
 
 final otpInputDecoration = InputDecoration(
-  contentPadding: EdgeInsets.symmetric(vertical: 15),
+  contentPadding: const EdgeInsets.symmetric(vertical: 15),
   border: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   enabledBorder: outlineInputBorder(),
@@ -52,6 +49,6 @@ final otpInputDecoration = InputDecoration(
 OutlineInputBorder outlineInputBorder() {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(15),
-    borderSide: BorderSide(color: primaryColor),
+    borderSide: const BorderSide(color: primaryColor),
   );
 }

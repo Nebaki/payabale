@@ -12,16 +12,6 @@ class Transaction extends StatefulWidget {
 class _TransactionState extends State<Transaction> {
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return Scaffold();
   }
 }
-=======
-    return  Scaffold(
-      body:Stack(
-        
-      )
-    );
-  }
-}
->>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea

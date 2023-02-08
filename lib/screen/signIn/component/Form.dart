@@ -5,6 +5,7 @@ import 'package:payabale/utils/constants.dart';
 import 'package:payabale/utils/keyboard.dart';
 
 import '../../../utils/themes.dart';
+import '../../mainPage.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({super.key});
@@ -95,6 +96,7 @@ class _SignInFormState extends State<SignInForm> {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
                       KeyboardUtil.hideKeyboard(context);
+                      Get.off(() => MainPage());
                     }
                   },
                   child: const Text(

@@ -21,14 +21,22 @@ class _OnboardState extends State<Onboard> {
         children: [
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(top: 100),
-              alignment: Alignment.center,
-              child: const Text("Pay.able",
-                  style: TextStyle(
-                      fontSize: 75,
-                      color: primaryColor,
-                      fontWeight: FontWeight.bold)),
+              width: double.infinity,
+              height: 400,
+              child: Image.asset(
+                'assets/images/onb.jpeg',
+                fit: BoxFit.cover,
+              ),
             ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 10),
+            alignment: Alignment.center,
+            child: const Text("Pay.able",
+                style: TextStyle(
+                    fontSize: 55,
+                    color: primaryColor,
+                    fontWeight: FontWeight.bold)),
           ),
           Container(
             child: const Text("financial dreams deliver",
@@ -38,7 +46,7 @@ class _OnboardState extends State<Onboard> {
                     fontWeight: FontWeight.w100)),
           ),
           Container(
-            margin: EdgeInsets.only(top: 100),
+            margin: EdgeInsets.only(top: 10),
             child: const Text("Receive.Hold.Pay",
                 style: TextStyle(
                     fontSize: 35,
@@ -46,20 +54,7 @@ class _OnboardState extends State<Onboard> {
                     fontWeight: FontWeight.bold)),
           ),
           Container(
-            margin: EdgeInsets.only(
-              top: 20,
-            ),
-            child: const Text(
-              "The safer and easy \n way to receive and pay with Payable",
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w300),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 50),
+            margin: EdgeInsets.only(left: 20, right: 20, top: 20),
             width: double.infinity,
             height: 56,
             child: TextButton(
@@ -78,10 +73,10 @@ class _OnboardState extends State<Onboard> {
                 )),
           ),
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 80),
+            margin: EdgeInsets.only(top: 10, bottom: 10),
             child: TextButton(
               onPressed: () {
-                Get.off(()=>SignUp());
+                Get.off(() => SignUp());
               },
               child: Text(
                 "Create a new account",

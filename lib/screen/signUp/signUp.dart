@@ -190,8 +190,4 @@ class _SignUpState extends State<SignUp> {
           floatingLabelBehavior: inputDecorationTheme().floatingLabelBehavior),
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea

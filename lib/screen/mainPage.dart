@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -21,9 +20,9 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
   List<Widget> tabItems = [
-    const Detail(),
     const Dashboard(),
     const Transaction(),
+    const Detail(),
     const Profile(),
   ];
   @override
@@ -58,15 +57,5 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
     );
-=======
-import 'package:flutter/material.dart';
-
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
->>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea
   }
 }
