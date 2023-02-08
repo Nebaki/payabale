@@ -28,7 +28,7 @@ class _SplashState extends State<Splash> {
         children: [
           Container(
             alignment: Alignment.center,
-            child: const Text("Pay.Able",
+            child: const Text("Pay.able",
                 style: TextStyle(
                     fontSize: 75,
                     color: Colors.white,

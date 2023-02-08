@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:payabale/utils/constants.dart';
 
 import 'component/otpform.dart';
 
+=======
+import 'package:get/get.dart';
+import 'package:payabale/screen/otp/component/otpForm.dart';
+import 'package:payabale/utils/constants.dart';
+
+>>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea
 class OtpScreen extends StatefulWidget {
   @override
   State<OtpScreen> createState() => _OtpScreenState();
@@ -70,4 +77,8 @@ class _OtpScreenState extends State<OtpScreen> {
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+<<<<<<< HEAD
 import 'package:get/get.dart';
 import 'package:payabale/screen/privacyPolicy/privacyPolicy.dart';
 import 'package:payabale/screen/termsAndCondition/termsAndCondition.dart';
@@ -8,6 +9,8 @@ import 'package:payabale/utils/constants.dart';
 
 import 'fees/fees.dart';
 import 'help/help.dart';
+=======
+>>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -19,6 +22,7 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -239,3 +243,12 @@ class _ProfileState extends State<Profile> {
     );
   }
 }
+=======
+    return  Scaffold(
+      body:Stack(
+        
+      )
+    );
+  }
+}
+>>>>>>> 7d06be78d792b08e020b0a8defbb87d527f2f6ea

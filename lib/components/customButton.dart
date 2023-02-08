@@ -9,7 +9,7 @@ class LoadingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
+      children: const [
         Text(Kloading),
         SizedBox(
           height: 30,
@@ -27,9 +27,9 @@ class ContinueButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return const Text(
       "Continue",
-      style: const TextStyle(
+      style: TextStyle(
         fontSize: 18,
         color: Colors.white,
       ),
