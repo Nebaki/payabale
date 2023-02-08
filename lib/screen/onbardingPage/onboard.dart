@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:get/get.dart';
 import 'package:payabale/screen/signIn/signIn.dart';
+import 'package:payabale/screen/signUp/signUp.dart';
 import 'package:payabale/utils/constants.dart';
+import 'package:get/get.dart';
 
 class Onboard extends StatefulWidget {
   const Onboard({super.key});
@@ -22,7 +23,7 @@ class _OnboardState extends State<Onboard> {
             child: Container(
               margin: EdgeInsets.only(top: 100),
               alignment: Alignment.center,
-              child: const Text("Pay.Able",
+              child: const Text("Pay.able",
                   style: TextStyle(
                       fontSize: 75,
                       color: primaryColor,
@@ -79,7 +80,9 @@ class _OnboardState extends State<Onboard> {
           Container(
             margin: EdgeInsets.only(top: 20, bottom: 80),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.off(()=>SignUp());
+              },
               child: Text(
                 "Create a new account",
                 style: TextStyle(

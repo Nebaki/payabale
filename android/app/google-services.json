@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950555819097",
+    "project_id": "payable-4453c",
+    "storage_bucket": "payable-4453c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950555819097:android:1653fcad8cad2b129f4548",
+        "android_client_info": {
+          "package_name": "com.example.payabale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950555819097-0f7kooggg1badkt47r4m4flockmrlo5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-VhYcUQo34kLKJwgQmeFyWQMUxboZkRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950555819097-0f7kooggg1badkt47r4m4flockmrlo5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
