@@ -5,17 +5,18 @@ import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
 
-class Deposit extends StatefulWidget {
-  const Deposit({super.key});
+class Withdraw extends StatefulWidget {
+  const Withdraw({super.key});
 
   @override
-  State<Deposit> createState() => _DepositState();
+  State<Withdraw> createState() => _WithdrawState();
 }
 
-class _DepositState extends State<Deposit> {
+class _WithdrawState extends State<Withdraw> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return 
+    Scaffold(
       backgroundColor: backGroundColor,
       appBar: AppBar(
         leading: InkWell(
@@ -26,7 +27,7 @@ class _DepositState extends State<Deposit> {
           ),
         ),
         title: const Text(
-          "Deposit From",
+          "Withdraw to",
           style: TextStyle(color: primaryColor),
         ),
         elevation: 0,
@@ -39,7 +40,7 @@ class _DepositState extends State<Deposit> {
           children: [
             Container(
               margin: EdgeInsets.only(top: 40, left: 15),
-              child: const Text('Select Deposit \nMethod',
+              child: const Text('Where \nto send',
                   style: TextStyle(color: primaryColor, fontSize: 20)),
             ),
             Padding(
@@ -78,7 +79,7 @@ class _DepositState extends State<Deposit> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text(
-                                  'Fund your wallet',
+                                  'Transfer your money',
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Text(
@@ -115,7 +116,7 @@ class _DepositState extends State<Deposit> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text(
-                                  'Fund your wallet',
+                                  'Transfer your money',
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Text(
@@ -152,7 +153,7 @@ class _DepositState extends State<Deposit> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text(
-                                  'Fund your wallet',
+                                  'Transfer your money',
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Text(
@@ -189,7 +190,7 @@ class _DepositState extends State<Deposit> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text(
-                                  'Fund your wallet',
+                                  'Transfer your money',
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Text(
@@ -210,6 +211,5 @@ class _DepositState extends State<Deposit> {
         ),
       ),
     );
-    ;
   }
 }
