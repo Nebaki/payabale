@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:payabale/components/customButton.dart';
-import 'package:payabale/screen/dashboard/dashboard.dart';
 import 'package:payabale/utils/constants.dart';
 import 'package:payabale/utils/keyboard.dart';
 
@@ -51,7 +50,6 @@ class _OtpFormState extends State<OtpForm> {
   }
 
   final _formKey = GlobalKey<FormState>();
-  final _otp = TextEditingController();
   final _otp1 = TextEditingController();
   final _otp2 = TextEditingController();
   final _otp3 = TextEditingController();
@@ -65,7 +63,7 @@ class _OtpFormState extends State<OtpForm> {
       key: _formKey,
       child: Column(
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -74,7 +72,7 @@ class _OtpFormState extends State<OtpForm> {
                 child: TextFormField(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   autofocus: true,
-                  style: TextStyle(fontSize: 24),
+                  style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
@@ -94,7 +92,7 @@ class _OtpFormState extends State<OtpForm> {
                 child: TextFormField(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   focusNode: pin2FocusNode,
-                  style: TextStyle(fontSize: 24),
+                  style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
@@ -112,7 +110,7 @@ class _OtpFormState extends State<OtpForm> {
                 child: TextFormField(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   focusNode: pin3FocusNode,
-                  style: TextStyle(fontSize: 24),
+                  style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
@@ -130,7 +128,7 @@ class _OtpFormState extends State<OtpForm> {
                 child: TextFormField(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   focusNode: pin4FocusNode,
-                  style: TextStyle(fontSize: 24),
+                  style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
@@ -148,7 +146,7 @@ class _OtpFormState extends State<OtpForm> {
                 child: TextFormField(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   focusNode: pin5FocusNode,
-                  style: TextStyle(fontSize: 24),
+                  style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
@@ -166,7 +164,7 @@ class _OtpFormState extends State<OtpForm> {
                 child: TextFormField(
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     focusNode: pin6FocusNode,
-                    style: TextStyle(fontSize: 24),
+                    style: const TextStyle(fontSize: 24),
                     keyboardType: TextInputType.number,
                     textAlign: TextAlign.center,
                     decoration: otpInputDecoration,
@@ -184,25 +182,25 @@ class _OtpFormState extends State<OtpForm> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           buildTimer(),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(children: [
-            Text('Didn\'t get the code ?',
+            const Text('Didn\'t get the code ?',
                 style: TextStyle(
                     fontSize: 17, color: Color.fromARGB(178, 0, 0, 0))),
-            SizedBox(width: 10),
-            Text('Resend code',
+            const SizedBox(width: 10),
+            const Text('Resend code',
                 style: TextStyle(
                   color: primaryColor,
                   fontSize: 17,
                 ))
           ]),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Container(
@@ -222,8 +220,8 @@ class _OtpFormState extends State<OtpForm> {
                     setState(() {
                       loading = true;
                     });
-                    Future.delayed(Duration(seconds: 3), () {
-                      Get.off(() => MainPage());
+                    Future.delayed(const Duration(seconds: 3), () {
+                      Get.off(() => const MainPage());
                       showSnackBar("Registered succesfully");
                     });
                   }
@@ -235,14 +233,14 @@ class _OtpFormState extends State<OtpForm> {
                             loading = true;
                           });
                         },
-                        child: LoadingButton())
+                        child: const LoadingButton())
                     : InkWell(
                         onTap: () {
                           setState(() {
                             loading = false;
                           });
                         },
-                        child: ContinueButton()),
+                        child: const ContinueButton()),
               )),
         ],
       ),
@@ -254,14 +252,14 @@ Row buildTimer() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
-      Text("This sesion will end in ",
+      const Text("This sesion will end in ",
           style: TextStyle(fontSize: 17, color: Color.fromARGB(178, 0, 0, 0))),
       TweenAnimationBuilder(
         tween: Tween(begin: 60.0, end: 0.0),
-        duration: Duration(seconds: 60),
+        duration: const Duration(seconds: 60),
         builder: (_, dynamic value, child) => Text(
           "00:${value.toInt()}",
-          style: TextStyle(color: primaryColor, fontSize: 17),
+          style: const TextStyle(color: primaryColor, fontSize: 17),
         ),
       ),
     ],

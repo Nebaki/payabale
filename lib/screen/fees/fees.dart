@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
@@ -19,12 +17,12 @@ class _FeesState extends State<Fees> {
       appBar: AppBar(
         leading: InkWell(
           onTap: () => Get.back(),
-          child: Icon(
+          child: const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
         ),
-        title: Text(
+        title: const Text(
           "Fees",
           style: TextStyle(color: primaryColor),
         ),
@@ -34,63 +32,63 @@ class _FeesState extends State<Fees> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Color.fromARGB(255, 230, 241, 230),
+          color: const Color.fromARGB(255, 230, 241, 230),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
-              margin: EdgeInsets.fromLTRB(15, 50, 15, 15),
+              margin: const EdgeInsets.fromLTRB(15, 50, 15, 15),
               height: 50,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
                   ElevatedButton(
                     onPressed: () {},
-                    child: Text('Top up'),
                     style:
                         ElevatedButton.styleFrom(backgroundColor: primaryColor),
+                    child:  const Text('Top up'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   ElevatedButton(
                     onPressed: () {},
-                    child: Text(
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                    child: const Text(
                       'Virtual Card',
                       style: TextStyle(color: primaryColor),
                     ),
-                    style:
-                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   ElevatedButton(
                     onPressed: () {},
-                    child: Text(
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                    child: const Text(
                       'Physical Card',
                       style: TextStyle(color: primaryColor),
                     ),
-                    style:
-                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   ElevatedButton(
                     onPressed: () {},
-                    child: Text(
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                    child: const Text(
                       'Top up',
                       style: TextStyle(color: primaryColor),
                     ),
-                    style:
-                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
                   )
                 ],
               ),
             ),
             Container(
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 'Top up',
                 style: TextStyle(
                     color: primaryColor,
@@ -98,20 +96,20 @@ class _FeesState extends State<Fees> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 'Charge associated with top-up method',
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
               child: Text(
                 'Top up',
                 style: TextStyle(fontSize: 15),
@@ -123,10 +121,10 @@ class _FeesState extends State<Fees> {
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                      margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text('Load form local payment Card'),
                           Text('USD  0.3+2.1%',
                               style: TextStyle(fontWeight: FontWeight.bold))
@@ -134,10 +132,10 @@ class _FeesState extends State<Fees> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                      margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text('Load form local payment Card'),
                           Text(
                             'USD  0.3+2.1%',
@@ -147,10 +145,10 @@ class _FeesState extends State<Fees> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                      margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text('Voucher'),
                           Text('USD  0.00',
                               style: TextStyle(fontWeight: FontWeight.bold))
@@ -165,7 +163,7 @@ class _FeesState extends State<Fees> {
               padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
               child: Container(
                 alignment: Alignment.center,
-                child: Text(
+                child: const Text(
                   'Virtual Card',
                   style: TextStyle(
                       color: primaryColor,
@@ -176,18 +174,18 @@ class _FeesState extends State<Fees> {
             ),
             Container(
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 'Charge associated with your virtual PayAble card',
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
               child: Text(
                 'Virtual card',
                 style: TextStyle(fontSize: 15),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Padding(
@@ -196,10 +194,10 @@ class _FeesState extends State<Fees> {
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                      margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text('Virtual Card - First inssuance '),
                           Text('USD  0.3+2.1%',
                               style: TextStyle(fontWeight: FontWeight.bold))
@@ -207,10 +205,10 @@ class _FeesState extends State<Fees> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                      margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text('Virtual Card - Block'),
                           Text(
                             'USD  0.3+2.1%',
@@ -220,10 +218,10 @@ class _FeesState extends State<Fees> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                      margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text('Virtual Card'),
                           Text('USD  0.00',
                               style: TextStyle(fontWeight: FontWeight.bold))

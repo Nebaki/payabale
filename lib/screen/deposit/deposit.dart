@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 
 import '../../utils/constants.dart';
@@ -38,13 +36,13 @@ class _DepositState extends State<Deposit> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(top: 40, left: 15),
+              margin: const EdgeInsets.only(top: 40, left: 15),
               child: const Text('Select Deposit \nMethod',
                   style: TextStyle(color: primaryColor, fontSize: 20)),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15, top: 30),
-              child: const Text('Bank account',
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30),
+              child: Text('Bank account',
                   style: TextStyle(
                       color: primaryColor,
                       fontWeight: FontWeight.bold,
@@ -67,7 +65,7 @@ class _DepositState extends State<Deposit> {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10)),
-                              padding: EdgeInsets.all(3),
+                              padding: const EdgeInsets.all(3),
                               margin: const EdgeInsets.all(15),
                               child: const Icon(
                                 Icons.outbox_outlined,
@@ -97,14 +95,14 @@ class _DepositState extends State<Deposit> {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: Card(
-                        color: Color.fromARGB(255, 41, 80, 209),
+                        color: const Color.fromARGB(255, 41, 80, 209),
                         child: Row(
                           children: [
                             Container(
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10)),
-                              padding: EdgeInsets.all(3),
+                              padding: const EdgeInsets.all(3),
                               margin: const EdgeInsets.all(15),
                               child: const Icon(
                                 Icons.food_bank_outlined,
@@ -134,14 +132,14 @@ class _DepositState extends State<Deposit> {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: Card(
-                        color: Color.fromARGB(255, 118, 33, 142),
+                        color: const Color.fromARGB(255, 118, 33, 142),
                         child: Row(
                           children: [
                             Container(
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10)),
-                              padding: EdgeInsets.all(3),
+                              padding: const EdgeInsets.all(3),
                               margin: const EdgeInsets.all(15),
                               child: const Icon(
                                 Icons.wallet,
@@ -171,14 +169,14 @@ class _DepositState extends State<Deposit> {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: Card(
-                        color: Color.fromARGB(255, 130, 103, 93),
+                        color: const Color.fromARGB(255, 130, 103, 93),
                         child: Row(
                           children: [
                             Container(
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10)),
-                              padding: EdgeInsets.all(3),
+                              padding: const EdgeInsets.all(3),
                               margin: const EdgeInsets.all(15),
                               child: const Icon(
                                 Icons.currency_bitcoin,
@@ -210,6 +208,6 @@ class _DepositState extends State<Deposit> {
         ),
       ),
     );
-    ;
+    
   }
 }

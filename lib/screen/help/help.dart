@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:payabale/utils/constants.dart';
 
@@ -19,12 +17,12 @@ class _HelpState extends State<Help> {
       appBar: AppBar(
         leading: InkWell(
           onTap: () => Get.back(),
-          child: Icon(
+          child: const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
         ),
-        title: Text(
+        title: const Text(
           "Help",
           style: TextStyle(color: primaryColor),
         ),
@@ -36,37 +34,37 @@ class _HelpState extends State<Help> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(20, 10, 10, 10),
+              margin: const EdgeInsets.fromLTRB(20, 10, 10, 10),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.flag_circle,
                     size: 30,
                     color: primaryColor,
                   ),
-                  Text(
+                  const Text(
                     'PayAble',
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                   Expanded(child: Container()),
-                  Icon(Icons.menu_open_sharp, size: 30)
+                  const Icon(Icons.menu_open_sharp, size: 30)
                 ],
               ),
             ),
-            Divider(
+            const Divider(
               thickness: 2,
             ),
             Container(
-                margin: EdgeInsets.only(right: 20),
+                margin: const EdgeInsets.only(right: 20),
                 alignment: Alignment.bottomRight,
-                child: Icon(
+                child: const Icon(
                   Icons.cloud_circle_outlined,
                   size: 30,
                   color: primaryColor,
                 )),
             Container(
-              margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
-              child: Text(
+              margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+              child: const Text(
                 'Hi ,how can we help you?',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -75,12 +73,12 @@ class _HelpState extends State<Help> {
               ),
             ),
             Container(
-                margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                child: TextField(
+                margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+                child: const TextField(
                   decoration: InputDecoration(
                       label: Text('Enter the search item here ...')),
                 )),
-            Container(
+            SizedBox(
               height: 300,
               child: ListView(
                 scrollDirection: Axis.vertical,
@@ -90,10 +88,10 @@ class _HelpState extends State<Help> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.green,
                     ),
-                    margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.rocket_launch,
                           size: 50,
@@ -112,12 +110,12 @@ class _HelpState extends State<Help> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color.fromARGB(255, 95, 24, 201),
+                      color: const Color.fromARGB(255, 95, 24, 201),
                     ),
-                    margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.change_circle,
                           size: 50,
@@ -138,12 +136,12 @@ class _HelpState extends State<Help> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color.fromARGB(255, 179, 18, 190),
+                      color: const Color.fromARGB(255, 179, 18, 190),
                     ),
-                    margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.card_membership,
                           size: 50,
@@ -164,10 +162,10 @@ class _HelpState extends State<Help> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.blue,
                     ),
-                    margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.attach_money_rounded,
                           size: 50,

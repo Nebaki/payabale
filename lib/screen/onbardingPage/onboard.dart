@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:payabale/screen/signIn/signIn.dart';
 import 'package:payabale/screen/signUp/signUp.dart';
 import 'package:payabale/utils/constants.dart';
@@ -20,7 +18,7 @@ class _OnboardState extends State<Onboard> {
       body: Column(
         children: [
           Expanded(
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               height: 400,
               child: Image.asset(
@@ -30,7 +28,7 @@ class _OnboardState extends State<Onboard> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 10),
+            margin: const EdgeInsets.only(top: 10),
             alignment: Alignment.center,
             child: const Text("Pay.able",
                 style: TextStyle(
@@ -38,15 +36,13 @@ class _OnboardState extends State<Onboard> {
                     color: primaryColor,
                     fontWeight: FontWeight.bold)),
           ),
+          const Text("financial dreams deliver",
+              style: TextStyle(
+                  fontSize: 25,
+                  color: primaryColor,
+                  fontWeight: FontWeight.w100)),
           Container(
-            child: const Text("financial dreams deliver",
-                style: TextStyle(
-                    fontSize: 25,
-                    color: primaryColor,
-                    fontWeight: FontWeight.w100)),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 10),
+            margin: const EdgeInsets.only(top: 10),
             child: const Text("Receive.Hold.Pay",
                 style: TextStyle(
                     fontSize: 35,
@@ -54,7 +50,7 @@ class _OnboardState extends State<Onboard> {
                     fontWeight: FontWeight.bold)),
           ),
           Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+            margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
             width: double.infinity,
             height: 56,
             child: TextButton(
@@ -65,20 +61,20 @@ class _OnboardState extends State<Onboard> {
                   backgroundColor: primaryColor,
                 ),
                 onPressed: () {
-                  Get.off(() => SignIn());
+                  Get.off(() => const SignIn());
                 },
-                child: Text(
+                child: const Text(
                   "Sign in",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
                 )),
           ),
           Container(
-            margin: EdgeInsets.only(top: 10, bottom: 10),
+            margin: const EdgeInsets.only(top: 10, bottom: 10),
             child: TextButton(
               onPressed: () {
-                Get.off(() => SignUp());
+                Get.off(() => const SignUp());
               },
-              child: Text(
+              child: const Text(
                 "Create a new account",
                 style: TextStyle(
                     color: primaryColor,

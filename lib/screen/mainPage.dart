@@ -1,11 +1,8 @@
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:payabale/screen/detail.dart';
+import 'package:payabale/screen/addCard/addCard.dart';
 import 'package:payabale/screen/profile.dart';
 import 'package:payabale/screen/transaction.dart';
-import 'package:payabale/utils/constants.dart';
 
 import 'dashboard/dashboard.dart';
 
@@ -22,7 +19,7 @@ class _MainPageState extends State<MainPage> {
   List<Widget> tabItems = [
     const Dashboard(),
     const Transaction(),
-    const Detail(),
+    const AddCard(),
     const Profile(),
   ];
   @override
@@ -43,7 +40,7 @@ class _MainPageState extends State<MainPage> {
             title: const Text('Home'),
           ),
           FlashyTabBarItem(
-            icon: Icon(Icons.bar_chart),
+            icon: const Icon(Icons.bar_chart),
             title: const Text('Transaction'),
           ),
           FlashyTabBarItem(

@@ -1,10 +1,10 @@
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:payabale/utils/constants.dart';
 
 import '../deposit/deposit.dart';
+import '../notification/notification.dart';
 import '../requestPayment/requestPayment.dart';
 import '../withdrawTo/withdraw.dart';
 
@@ -20,215 +20,217 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backGroundColor,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage('assets/images/Neba.jpeg'),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/Neba.jpeg'),
+                  ),
+                ),
+                Column(
+                  children: [
+                    Row(
+                      children: const [
+                        Text('Good morning,'),
+                        Text(
+                          ' Andualem',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
-                  ),
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text('Good morning,'),
-                          Text(
-                            ' Andualem',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        'Tue ,14 january',
-                        style: TextStyle(fontSize: 12),
-                      )
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: Icon(
+                    const Text(
+                      'Tue ,14 january',
+                      style: TextStyle(fontSize: 12),
+                    )
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: InkWell(
+                    onTap: () => Get.to(() => const Notifications()),
+                    child: const Icon(
                       Icons.notifications_on,
                       color: primaryColor,
                     ),
-                  )
-                ],
-              ),
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: primaryColor,
-                        borderRadius: BorderRadius.circular(10)),
-                    margin: EdgeInsets.fromLTRB(15, 40, 15, 30),
-                    height: 150,
                   ),
-                  Positioned(
-                      left: 30,
-                      right: 30,
-                      bottom: 0,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10)),
-                        height: 50,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.arrow_upward_outlined,
-                              color: primaryColor,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              'Up by +0% from last month',
-                              style: TextStyle(color: primaryColor),
-                            )
-                          ],
-                        ),
-                      )),
-                  Positioned(
-                      top: 70,
-                      left: 20,
-                      child: Text(
-                        'My balance',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 20),
-                      )),
-                  Positioned(
-                      top: 90,
-                      left: 20,
-                      child: Text(
-                        '\$120,000,000',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 25),
-                      ))
-                ],
-              ),
-              Container(
-                padding: EdgeInsets.all(15),
-                child: Card(
-                  child: Column(
-                    children: [
-                      Row(
+                )
+              ],
+            ),
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: BorderRadius.circular(10)),
+                  margin: const EdgeInsets.fromLTRB(15, 40, 15, 30),
+                  height: 150,
+                ),
+                Positioned(
+                    left: 30,
+                    right: 30,
+                    bottom: 0,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10)),
+                      height: 50,
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            Icons.arrow_upward_outlined,
+                            color: primaryColor,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'Up by +0% from last month',
+                            style: TextStyle(color: primaryColor),
+                          )
+                        ],
+                      ),
+                    )),
+                const Positioned(
+                    top: 70,
+                    left: 20,
+                    child: Text(
+                      'My balance',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20),
+                    )),
+                const Positioned(
+                    top: 90,
+                    left: 20,
+                    child: Text(
+                      '\$120,000,000',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 25),
+                    ))
+              ],
+            ),
+            Container(
+              padding: const EdgeInsets.all(15),
+              child: Card(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () => Get.to(() => const Withdraw()),
+                          child: Container(
+                            margin: const EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                                color: backGroundColor,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: const [
+                                Icon(
+                                  Icons.outbond,
+                                  color: primaryColor,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text('Withdraw')
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(() => const RequestPayment()),
+                          child: Container(
+                            margin: const EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                                color: backGroundColor,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: const [
+                                Icon(
+                                  Icons.request_quote,
+                                  color: primaryColor,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text('Request')
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(() => const Deposit()),
+                          child: Container(
+                            margin: const EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                                color: backGroundColor,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(
+                              children: const [
+                                Icon(
+                                  Icons.save_sharp,
+                                  color: primaryColor,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text('Deposit')
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          InkWell(
-                            onTap: () => Get.to(() => Withdraw()),
-                            child: Container(
-                              margin: EdgeInsets.all(10),
-                              padding: EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  color: backGroundColor,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.outbond,
-                                    color: primaryColor,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text('Withdraw')
-                                ],
-                              ),
-                            ),
+                          const Text(
+                            'More operations',
+                            style: TextStyle(fontSize: 20, color: primaryColor),
                           ),
-                          InkWell(
-                            onTap: () => Get.to(() => RequestPayment()),
-                            child: Container(
-                              margin: EdgeInsets.all(10),
-                              padding: EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  color: backGroundColor,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.request_quote,
-                                    color: primaryColor,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text('Request')
-                                ],
-                              ),
-                            ),
+                          const SizedBox(
+                            width: 20,
                           ),
-                          InkWell(
-                            onTap: () => Get.to(() => Deposit()),
-                            child: Container(
-                              margin: EdgeInsets.all(10),
-                              padding: EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  color: backGroundColor,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.save_sharp,
-                                    color: primaryColor,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text('Deposit')
-                                ],
-                              ),
+                          Container(
+                            padding: const EdgeInsets.only(
+                              right: 20,
+                            ),
+                            child: const Icon(
+                              Icons.arrow_forward_outlined,
+                              color: primaryColor,
                             ),
                           )
                         ],
                       ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 15),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Text(
-                              'More operations',
-                              style:
-                                  TextStyle(fontSize: 20, color: primaryColor),
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(
-                                right: 20,
-                              ),
-                              child: Icon(
-                                Icons.arrow_forward_outlined,
-                                color: primaryColor,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-              Container(
-                  margin: EdgeInsets.only(left: 15, bottom: 5),
-                  alignment: Alignment.topLeft,
-                  child: Text('Transactions')),
-              Container(
-                margin: EdgeInsets.only(left: 15, right: 15),
+            ),
+            Container(
+                margin: const EdgeInsets.only(left: 15, bottom: 5),
+                alignment: Alignment.topLeft,
+                child: const Text('Transactions')),
+            Expanded(
+              child: Container(
+                margin: const EdgeInsets.only(left: 15, right: 15),
                 height: 150,
                 child: ListView(
                   scrollDirection: Axis.vertical,
@@ -240,16 +242,16 @@ class _DashboardState extends State<Dashboard> {
                         child: Row(
                           children: [
                             Container(
-                                margin: EdgeInsets.all(15),
+                                margin: const EdgeInsets.all(15),
                                 child:
-                                    Icon(Icons.outbond, color: primaryColor)),
-                            SizedBox(
+                                    const Icon(Icons.outbond, color: primaryColor)),
+                            const SizedBox(
                               width: 10,
                             ),
-                            Text('Withdraw'),
+                            const Text('Withdraw'),
                             Expanded(child: Container()),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8.0),
+                            const Padding(
+                              padding: EdgeInsets.only(right: 8.0),
                               child: Text('\$3000'),
                             )
                           ],
@@ -263,16 +265,16 @@ class _DashboardState extends State<Dashboard> {
                         child: Row(
                           children: [
                             Container(
-                                margin: EdgeInsets.all(15),
+                                margin: const EdgeInsets.all(15),
                                 child:
-                                    Icon(Icons.receipt, color: primaryColor)),
-                            SizedBox(
+                                    const Icon(Icons.receipt, color: primaryColor)),
+                            const SizedBox(
                               width: 10,
                             ),
-                            Text('Received'),
+                            const Text('Received'),
                             Expanded(child: Container()),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8.0),
+                            const Padding(
+                              padding: EdgeInsets.only(right: 8.0),
                               child: Text('\$300'),
                             )
                           ],
@@ -286,16 +288,16 @@ class _DashboardState extends State<Dashboard> {
                         child: Row(
                           children: [
                             Container(
-                                margin: EdgeInsets.all(15),
-                                child: Icon(Icons.save_sharp,
+                                margin: const EdgeInsets.all(15),
+                                child: const Icon(Icons.save_sharp,
                                     color: primaryColor)),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
-                            Text('Deposited'),
+                            const Text('Deposited'),
                             Expanded(child: Container()),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8.0),
+                            const Padding(
+                              padding: EdgeInsets.only(right: 8.0),
                               child: Text('\$500'),
                             )
                           ],
@@ -304,9 +306,9 @@ class _DashboardState extends State<Dashboard> {
                     )
                   ],
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );
