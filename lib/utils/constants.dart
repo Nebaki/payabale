@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 const primaryColor = Colors.green;
-const backGroundColor = Color.fromARGB(255, 230, 241, 230);
+const backGroundColor = const Color(0xffF3F9F5);
+
+const DashboardTransactionColor = const Color(0xffF8FEFA);
 
 final RegExp emailValidatorRegExp =
     RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");

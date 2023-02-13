@@ -16,7 +16,7 @@ class SignInForm extends StatefulWidget {
 
 class _SignInFormState extends State<SignInForm> {
   final _formKey = GlobalKey<FormState>();
-  String? phone;
+  String? email;
   String? password;
   bool _passwordVisible = false;
   void initState() {
@@ -70,7 +70,7 @@ class _SignInFormState extends State<SignInForm> {
             ),
             Container(
                 margin: const EdgeInsets.only(left: 30, right: 30),
-                child: buildPhoneFormField()),
+                child: buildEmailFormField()),
             const SizedBox(
               height: 20,
             ),
@@ -139,20 +139,16 @@ class _SignInFormState extends State<SignInForm> {
       onSaved: (newValue) => password = newValue,
       validator: (value) {
         if (value!.isEmpty) {
-          KeyboardUtil.hideKeyboard(context);
           return kPassNullError;
         } else if (value.length < 4) {
-          KeyboardUtil.hideKeyboard(context);
           return kShortPassError;
         } else if (value.length >= 25) {
-          KeyboardUtil.hideKeyboard(context);
           return kLongPassError;
         } else if (value.isNotEmpty) {
           KeyboardUtil.hideKeyboard(context);
         }
         return null;
       },
-      // controller: passController, //loginController.passController,
       decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
@@ -181,32 +177,21 @@ class _SignInFormState extends State<SignInForm> {
     );
   }
 
-  TextFormField buildPhoneFormField() {
+  TextFormField buildEmailFormField() {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
-      onSaved: (newValue) => phone = newValue,
-      validator: (value) {
-        if (value!.isEmpty) {
-          KeyboardUtil.hideKeyboard(context);
-          return kPhoneNumberNullError;
-        } else if (value.length < 10) {
-          KeyboardUtil.hideKeyboard(context);
-          return kShortphoneError;
-        } else if (value.length > 13) {
-          KeyboardUtil.hideKeyboard(context);
-          return kLongphoneError;
-        }
-        KeyboardUtil.hideKeyboard(context);
+      onSaved: (newValue) => email = newValue,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      onChanged: (value) {
         return null;
+      },
+      validator: (value) {
+        if (!emailValidatorRegExp.hasMatch(value!)) return kInvalidEmailError;
       },
       decoration: InputDecoration(
           labelText: "Email",
-          hintText: "Enter your email",
-          focusColor: primaryColor,
-          suffixIcon: const Icon(
-            Icons.mail,
-            color: primaryColor,
-          ),
+          hintText: "Enter your email address",
+          suffixIcon: Icon(Icons.mail),
           border: inputDecorationTheme().border,
           enabledBorder: inputDecorationTheme().enabledBorder,
           focusedBorder: inputDecorationTheme().focusedBorder,

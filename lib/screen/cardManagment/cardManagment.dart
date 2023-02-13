@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:get/get.dart';
 import 'package:payabale/utils/constants.dart';
+
+import '../addCard/addCard.dart';
+import '../requestCard/requestCard.dart';
 
 class CardManagment extends StatefulWidget {
   const CardManagment({super.key});
@@ -127,32 +131,78 @@ class _CardManagmentState extends State<CardManagment> {
             height: MediaQuery.of(context).size.height / 2,
             child: Column(
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 15.0, right: 15, top: 15),
-                  child: TextField(
-                    decoration:
-                        InputDecoration(hintText: 'Apply For Virtual Card'),
+                InkWell(
+                  onTap: () => Get.to(() => ReqCard()),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 15.0, right: 15, top: 15),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Apply for virtual card',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            Icon(
+                              Icons.add_box,
+                              color: primaryColor,
+                            )
+                          ],
+                        ),
+                        Divider(
+                          thickness: 2,
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 15.0, right: 15, top: 15),
-                  child: TextField(
-                    decoration: InputDecoration(hintText: 'View PIN'),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Card details',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          Icon(
+                            Icons.add_box,
+                            color: primaryColor,
+                          )
+                        ],
+                      ),
+                      Divider(
+                        thickness: 2,
+                      )
+                    ],
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 15.0, right: 15, top: 15),
-                  child: TextField(
-                    decoration: InputDecoration(hintText: 'Update PIN'),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Report as lost/stolen',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          Icon(
+                            Icons.add_box,
+                            color: primaryColor,
+                          )
+                        ],
+                      ),
+                      Divider(
+                        thickness: 2,
+                      )
+                    ],
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 15.0, right: 15, top: 15),
-                  child: TextField(
-                    decoration:
-                        InputDecoration(hintText: 'Report as lost/stolen'),
-                  ),
-                )
               ],
             ),
           )

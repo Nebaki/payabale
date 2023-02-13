@@ -39,7 +39,8 @@ dependencies:
   get: 
   flashy_tab_bar2: ^0.0.6
   intl: ^0.17.0
-
+  custom_navigator: ^0.3.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
